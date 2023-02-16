@@ -5,8 +5,13 @@ alert (`Hola ${nombre}, bienvenido a CotizaTranqui`);
 
 const divisa = [
     {nombre: "Dolar", precio: 380},
-    {nombre: "Euro", precio: 400},
-    {nombre: "Real", precio: 76},,
+    {nombre: "Euro", precio: 405},
+    {nombre: "Real", precio: 76},
+    {nombre: "Peso uruguayo", precio: 9},
+    {nombre: "Peso chileno", precio: 0.048},
+    {nombre: "Libras", precio: 460},
+    {nombre: "Guaranies", precio: 0.052},
+    {nombre: "Soles", precio: 100},
 ];
 
 let seleccion = prompt ("¿Desea realizar un cambio de divisa?. si/no")
@@ -27,7 +32,7 @@ if (seleccion == "si"){
 while(seleccion != "no"){
     let divisa = prompt("Elija la divisa a comprar")
 
-if(divisa == "Dolar" || divisa == "Euro" || divisa == "Real"){
+if(divisa == "Dolar" || divisa == "Euro" || divisa == "Real" || divisa == "Peso uruguayo" || divisa == "Peso chileno" || divisa == "Libras" || divisa == "Guaranies" || divisa == "Soles"){
     switch(divisa){
         case "Dolar":
         precio = 380;
@@ -37,6 +42,21 @@ if(divisa == "Dolar" || divisa == "Euro" || divisa == "Real"){
         break
         case "Real":
         precio = 76;
+        break
+        case "Peso uruguayo":
+        precio = 9;
+        break
+        case "Peso chileno":
+        precio = 0.048;
+        break
+        case "Libras":
+        precio = 460;
+        break
+        case "Guaranies":
+        precio = 0.052;
+        break
+        case "Soles":
+        precio = 100;
         break
     }
 
