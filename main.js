@@ -4,9 +4,9 @@ console.log(nombre);
 alert (`Hola ${nombre}, bienvenido a CotizaTranqui`);
 
 const divisa = [
-    {nombre: "Dolar", precio: 380},
-    {nombre: "Euro", precio: 405},
-    {nombre: "Real", precio: 76},
+    {nombre: "Dolar", precio: 385},
+    {nombre: "Euro", precio: 410},
+    {nombre: "Real", precio: 78},
     {nombre: "Peso uruguayo", precio: 9},
     {nombre: "Peso chileno", precio: 0.048},
     {nombre: "Libras", precio: 460},
