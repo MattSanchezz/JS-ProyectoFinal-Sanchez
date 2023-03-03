@@ -1,72 +1,47 @@
-let nombre = prompt ("Ingrese su Nombre")
-console.log(nombre);
-
-alert (`Hola ${nombre}, bienvenido a CotizaTranqui`);
-
-const divisa = [
-    {nombre: "Dolar", precio: 385},
-    {nombre: "Euro", precio: 410},
-    {nombre: "Real", precio: 78},
-    {nombre: "Peso uruguayo", precio: 9},
-    {nombre: "Peso chileno", precio: 0.048},
-    {nombre: "Libras", precio: 460},
-    {nombre: "Guaranies", precio: 0.052},
-    {nombre: "Soles", precio: 100},
-];
-
-let seleccion = prompt ("¿Desea realizar un cambio de divisa?. si/no")
-
-while(seleccion != "si" && seleccion != "no"){
-    alert("Por favor ingresa si o no")
-    seleccion = prompt ("¿Desea realizar un cambio de divisa?. si/no")
-}
-
-if (seleccion == "si"){
-    alert("Estas son las divisas disponibles y sus respectivos precios en Pesos Argentinos")
-    let todaslasDivisas = divisa.map((divisa) => divisa.nombre + " " + "$" + divisa.precio );
-    alert(todaslasDivisas.join(" - "))
-}else if (seleccion == "no"){
-    alert(`Fin del sistema`)
-}
-
-while(seleccion != "no"){
-    let divisa = prompt("Elija la divisa a comprar")
-
-if(divisa == "Dolar" || divisa == "Euro" || divisa == "Real" || divisa == "Peso uruguayo" || divisa == "Peso chileno" || divisa == "Libras" || divisa == "Guaranies" || divisa == "Soles"){
-    switch(divisa){
-        case "Dolar":
-        precio = 380;
-        break
-        case "Euro":
-        precio = 405;
-        break
-        case "Real":
-        precio = 76;
-        break
-        case "Peso uruguayo":
-        precio = 9;
-        break
-        case "Peso chileno":
-        precio = 0.048;
-        break
-        case "Libras":
-        precio = 460;
-        break
-        case "Guaranies":
-        precio = 0.052;
-        break
-        case "Soles":
-        precio = 100;
-        break
+function convertir(){
+    var valore = parseInt (document.getElementById("valor").value);
+    var resultado = 0;
+    var Dolar = 380;
+    var Euro = 410;
+    var Real = 78;
+    var Uruguayo = 9;
+    var Chileno = 0.048;
+    var Libra = 460;
+    var Guaranies = 0.052;
+    var Soles = 100;
+    if (document.getElementById("uno").checked){
+        resultado = valore / Dolar;
+        alert("El cambio de Pesos a Dolares es: $ " + resultado.toFixed(2));
     }
-
-    let cantidad = parseInt(prompt("¿Cuanto desea comprar?"))
-    console.log (cantidad)
-    const total = (precio * cantidad)
-    console.log (total)
-    alert (`Se necesita ${total} pesos argentinos para la compra`)
-}
+    else if (document.getElementById("dos").checked){
+        resultado = valore / Euro;
+        alert("El cambio de Pesos a Euros es: $ " + resultado.toFixed(2));
+    }
+    else if (document.getElementById("cuatro").checked){
+        resultado = valore / Uruguayo;
+        alert("El cambio de Pesos a Pesos Uruguayos es: $ " + resultado.toFixed(2));
+    }
+    else if (document.getElementById("cinco").checked){
+        resultado = valore / Chileno;
+        alert("El cambio de Pesos a Pesos Chilenos es: $ " + resultado.toFixed(2));
+    }
+    else if (document.getElementById("seis").checked){
+        resultado = valore / Libras;
+        alert("El cambio de Pesos a Libras es: $ " + resultado.toFixed(2));
+    }
+    else if (document.getElementById("tres").checked){
+        resultado = valore / Real;
+        alert("El cambio de Pesos a Reales es: $ " + resultado.toFixed(2));
+    }
+    else if (document.getElementById("siete").checked){
+        resultado = valore / Guaranies;
+        alert("El cambio de Pesos a Guaranies es: $ " + resultado.toFixed(2));
+    }
+    else if (document.getElementById("ocho").checked){
+        resultado = valore / Soles;
+        alert("El cambio de Pesos a Soles es: $ " + resultado.toFixed(2));
+    }
     else{
-    alert("No tenemos esa divisa")
+        alert("Debe completar los campos para continuar")
     }
 }
