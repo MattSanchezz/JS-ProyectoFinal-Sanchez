@@ -49,6 +49,10 @@ body {
 .refcotiza{
     grid-area: refcotiza;
 }
+.formulario{
+    display: flex;
+    justify-content: center;
+}
 .redes{
     grid-area: proxrece;
     display: flex;

@@ -8,7 +8,7 @@ form.addEventListener('submit', (event) => {
 
   localStorage.setItem('user', JSON.stringify({ email, password }));
 
-  swal('¡Inicio de sesión exitoso!', '', 'success')
+  swal('¡Inicio de sesión exitoso!!', '', 'success')
     .then(() => {
       window.location.href = './cotiza/cotizador.html';
     });
