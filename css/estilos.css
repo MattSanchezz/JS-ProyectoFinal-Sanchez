@@ -15,6 +15,7 @@ body {
     grid-auto-flow: row;
     grid-template-areas: 
         "titulo titulo titulo titulo titulo"
+        "cuenta cuenta cuenta cuenta cuenta"
         "logocotiza logocotiza logocotiza logocotiza logocotiza"
         "refcotiza refcotiza refcotiza refcotiza refcotiza"
         "copyr copyr copyr copyr copyr";
@@ -32,6 +33,11 @@ body {
     line-height: 24px;
     text-align: center;
     color: #000000;
+}
+.cuenta {
+    grid-area: cuenta;
+    display: flex;
+    justify-content: center;
 }
 .logocotiza {
     grid-area: logocotiza; 
